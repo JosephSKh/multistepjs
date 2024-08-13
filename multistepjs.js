@@ -209,7 +209,7 @@ function disableBtn(_0x59e8ba) {
     // $("[data-form=\"submit-btn\"]").addClass("disabled");
     $("[data-form-ms=\"submit-btn\"]").css({
       opacity: "0.4",
-      // "pointer-events": "none"
+      "pointer-events": "auto"
     });
     // $("[data-form-ms=\"submit-btn\"]").addClass("disabled");
   }
