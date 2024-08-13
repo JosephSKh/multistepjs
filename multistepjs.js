@@ -206,12 +206,12 @@ function disableBtn(_0x59e8ba) {
       opacity: "0.4",
       "pointer-events": "none"
     });
-    $("[data-form=\"submit-btn\"]").addClass("disabled");
+    // $("[data-form=\"submit-btn\"]").addClass("disabled");
     $("[data-form-ms=\"submit-btn\"]").css({
       opacity: "0.4",
-      "pointer-events": "none"
+      // "pointer-events": "none"
     });
-    $("[data-form-ms=\"submit-btn\"]").addClass("disabled");
+    // $("[data-form-ms=\"submit-btn\"]").addClass("disabled");
   }
 }
 function enableBtn() {
@@ -301,7 +301,7 @@ function updateStep() {
       }
     });
     if (emptyInput > 0x0) {
-      $("input[type=\"submit\"]").addClass("disabled");
+      // $("input[type=\"submit\"]").addClass("disabled");
     } else {
       $("input[type=\"submit\"]").removeClass("disabled");
     }
