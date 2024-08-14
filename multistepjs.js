@@ -57,7 +57,7 @@ $('.form-back-btn.popup-btn').click(function(e) {
 
 $("#wf-form-Pop-up-Register-Your-Interest").submit(function(e) {
         var isFormValid = true;
-         $(this).parents('form').find('input[name="email-interest"], input[name="full-name-interest"], input[name="phone-popup-interest"]').each((i, e) => {
+         $(this).find('input[name="email-interest"], input[name="full-name-interest"], input[name="phone-popup-interest"]').each((i, e) => {
                 if (!e.value) {
                         isFormValid = false;
                 }
