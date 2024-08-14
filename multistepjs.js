@@ -30,17 +30,23 @@ function showNotification(message) {
 let popupFormStepStatus = 0;
 $($('#popup-interest .form-step')[0]).show();
 $($('#popup-interest .form-step')[1]).hide();
+$('#popup-interest .form-back-btn').hide();
+$('#popup-interest .form-submit-btn').hide();
 
 $('.form-next-btn.popup-btn').click(function(e) {
         $($('#popup-interest .form-step')[1]).show();
         $($('#popup-interest .form-step')[0]).hide();
-        $(this).hide();
-        $('.form-back-btn.popup-btn').show();
+        
+        $('#popup-interest .form-back-btn').show();
+        $('#popup-interest .form-submit-btn').show();
+        $('.form-next-btn.popup-btn').hide();
 });
 $('.form-back-btn.popup-btn').click(function(e) {
         $($('#popup-interest .form-step')[0]).show();
         $($('#popup-interest .form-step')[1]).hide();
-        $(this).hide();
+        
+        $('#popup-interest .form-back-btn').hide();
+        $('#popup-interest .form-submit-btn').hide();
         $('.form-next-btn.popup-btn').show();
 });
 
