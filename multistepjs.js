@@ -190,7 +190,7 @@ $("[data-form=\"progress-indicator\"]").on("click", clickableIndicator);
 $("[data-text=\"current-step\"]").text(curStep);
 steps.hide();
 $("[data-success-card]").hide();
-$("[data-form=\"next-btn\"][type=\"submit\"]").each(function () {
+$("[data-form=\"next-btn\":not(.popup-btn)][type=\"submit\"]").each(function () {
   $(this).attr("type", "button");
 });
 function getParams() {
@@ -244,11 +244,11 @@ if (quiz) {
 function disableBtn(_0x59e8ba) {
   fill = false;
   if (!customError) {
-    $("[data-form=\"next-btn\"]").css({
+    $("[data-form=\"next-btn\"]:not(.popup-btn)").css({
       opacity: "0.4",
       "pointer-events": "none"
     });
-    $("[data-form=\"next-btn\"]").addClass("disabled");
+    $("[data-form=\"next-btn\"]:not(.popup-btn)").addClass("disabled");
     $("[data-form=\"submit-btn\"]").css({
       opacity: "0.4",
       "pointer-events": "auto"
@@ -263,11 +263,11 @@ function disableBtn(_0x59e8ba) {
 }
 function enableBtn() {
   fill = true;
-  $("[data-form=\"next-btn\"]").css({
+  $("[data-form=\"next-btn\"]:not(.popup-btn)").css({
     "pointer-events": "auto",
     opacity: "1"
   });
-  $("[data-form=\"next-btn\"]").removeClass("disabled");
+  $("[data-form=\"next-btn\"]:not(.popup-btn)").removeClass("disabled");
   $("[data-form=\"submit-btn\"]").css({
     "pointer-events": "auto",
     opacity: "1"
@@ -395,23 +395,23 @@ function updateStep() {
     $(steps[x]).find("[data-answer=\"" + answer + "\"]").addClass("active-answer-card");
   }
   if (x === 0x0) {
-    $("[data-form=\"back-btn\"]").hide();
-    $("[data-form=\"next-btn\"]").show();
+    $("[data-form=\"back-btn\"]:not(.popup-btn)").hide();
+    $("[data-form=\"next-btn\"]:not(.popup-btn)").show();
     $("[data-form=\"submit-btn\"]").hide();
   } else {
     if (x === steps.length - 0x1 || $(steps[x]).find("[data-form=\"submit\"]:visible").length > 0x0) {
-      $("[data-form=\"next-btn\"]").hide();
+      $("[data-form=\"next-btn\"]:not(.popup-btn)").hide();
       if ($(steps[x]).find("[data-form=\"next-btn\"][data-submit-show]").data("submit-show")) {
         $(steps[x]).find("[data-form=\"next-btn\"][data-submit-show]").show();
       } else if ($("[data-form=\"next-btn\"]").data("submit-show")) {
-        $("[data-form=\"next-btn\"]").show();
+        $("[data-form=\"next-btn\"]:not(.popup-btn)").show();
       }
       $("[data-form=\"submit-btn\"]").show();
       $("[data-form-ms=\"submit-btn\"]").show();
-      $("[data-form=\"back-btn\"]").show();
+      $("[data-form=\"back-btn\"]:not(.popup-btn)").show();
     } else {
-      $("[data-form=\"next-btn\"]").show();
-      $("[data-form=\"back-btn\"]").show();
+      $("[data-form=\"next-btn\"]:not(.popup-btn)").show();
+      $("[data-form=\"back-btn\"]:not(.popup-btn)").show();
       $("[data-form=\"submit-btn\"]").hide();
       $("[data-form-ms=\"submit-btn\"]").hide();
     }
@@ -1823,7 +1823,7 @@ $("body").on("keypress", function (_0x1f9e8f) {
     if ($(steps[x]).find("textarea").is(":focus")) {
       $(steps[x]).find("textarea:focus").val($(steps[x]).find("textarea:focus").val() + "\n");
     } else if ($("[data-enter]").data("enter") && fill && totalSteps > curStep) {
-      $("[data-form=\"next-btn\"]")[0x0].click();
+      $("[data-form=\"next-btn\"]:not(.popup-btn)")[0x0].click();
     }
   }
 });
