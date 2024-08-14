@@ -1461,7 +1461,6 @@ function validation() {
 }
 function displayErrorMessage() {
   $("[data-text=\"error-message\"]").hide();
-  showNotification('Please complete the form.')
   if (unfilledArr.length > 0x0) {
     unfilledArr.forEach(function (_0x5b3da0) {
       $("input[name=\"" + _0x5b3da0.input + "\"]").siblings("[data-text=\"error-message\"]").fadeIn();
@@ -1531,6 +1530,8 @@ $("[data-form=\"submit-btn\"]").on("click", function (_0x57a771) {
     }
   } else if (customError) {
     displayErrorMessage();
+  } else {       
+    showNotification('Please complete the form.');
   }
 });
 function nextStep() {
