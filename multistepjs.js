@@ -51,6 +51,23 @@ $('.form-back-btn.popup-btn').click(function(e) {
 });
 
 
+/* $('#popup-interest .form-submit-btn').click(function(e) {
+        
+}); */
+
+$("#wf-form-Pop-up-Register-Your-Interest").submit(function(e) {
+        var isFormValid = true;
+         $(this).parents('form').find('input[name="email-interest"], input[name="full-name-interest"], input[name="phone-popup-interest"]').each((i, e) => {
+                if (!e.value) {
+                        isFormValid = false;
+                }
+         });
+        if (!isFormValid) {
+                e.preventDefault();
+        }
+})
+
+
 // -- reverted on 10/5/24 -- force updated
 //reason - checkbox issue
 //reverted bug: required checkbox validation wasn't working on the last step
