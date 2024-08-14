@@ -1677,13 +1677,13 @@ function triggerInputAllData() {
     });
   }
 }
-$("[data-form=\"next-btn\"]").on("click", function () {
+$("[data-form=\"next-btn\"]:not(.popup-btn)").on("click", function () {
   next = true;
   back = false;
   nextStep();
   selectionQuiz();
 });
-$("[data-form=\"back-btn\"]").on("click", function () {
+$("[data-form=\"back-btn\"]:not(.popup-btn)").on("click", function () {
   next = false;
   back = true;
   backStep();
