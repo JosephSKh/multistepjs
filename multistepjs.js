@@ -250,7 +250,7 @@ function disableBtn(_0x59e8ba) {
     });
     $("[data-form=\"next-btn\"]:not(.popup-btn)").addClass("disabled");
     $("[data-form=\"submit-btn\"]").css({
-      opacity: "0.4",
+      opacity: "1",
       "pointer-events": "auto"
     });
     // $("[data-form=\"submit-btn\"]").addClass("disabled");
