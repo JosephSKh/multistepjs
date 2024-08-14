@@ -1552,13 +1552,7 @@ $("[data-form=\"submit-btn\"]").on("click", function (_0x57a771) {
     // showNotification('Please complete the form.');
     $(this).parents('form').find('input[name="email-interest"], input[name="full-name-interest"], input[name="phone-popup-interest"], input[name="email-footer"], input[name="full-name-footer"], input[name="phone-footer"]').each((i, e) => {
         $('.form-error-msg').remove(); 
-        const errorMessage = $('<span class="form-error-msg"></span>').text('Please fill this field')
-                .css({
-                    'color': '#ff4d4d',
-                    'font-size': '12px',
-                    'margin-top': '5px',
-                    'display': 'block'
-                });
+        const errorMessage = `<span style="color: #ff4d4d; font-size: 12px; margin-top: 5px; display: block">Please fill this field</span>`;
         if (!e.value) {
             e.after(errorMessage);
         }
