@@ -1554,7 +1554,7 @@ $("[data-form=\"submit-btn\"]").on("click", function (_0x57a771) {
         $('.form-error-msg').remove(); 
         const errorMessage = `<span class="form-error-msg" style="color: #ff4d4d; font-size: 12px; margin-top: 5px; display: block">Please fill this field</span>`;
         if (!e.value) {
-            e.after(errorMessage);
+            $(e).after(errorMessage);
         }
     })
   }
