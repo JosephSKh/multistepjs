@@ -63,7 +63,10 @@ $("#wf-form-Pop-up-Register-Your-Interest").submit(function(e) {
                 }
          });
         if (!isFormValid) {
+                $(this).attr('data-valid-form', 'false');
                 e.preventDefault();
+        } else {
+                $(this).attr('data-valid-form', 'true');
         }
 })
 
