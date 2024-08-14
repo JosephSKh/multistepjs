@@ -190,7 +190,7 @@ $("[data-form=\"progress-indicator\"]").on("click", clickableIndicator);
 $("[data-text=\"current-step\"]").text(curStep);
 steps.hide();
 $("[data-success-card]").hide();
-$("[data-form=\"next-btn\":not(.popup-btn)][type=\"submit\"]").each(function () {
+$("[data-form=\"next-btn\"][type=\"submit\"]:not(.popup-btn)").each(function () {
   $(this).attr("type", "button");
 });
 function getParams() {
