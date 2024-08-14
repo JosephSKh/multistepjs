@@ -1,3 +1,32 @@
+function showNotification(message) {
+        const notification = $('<div></div>').text(message)
+            .css({
+                'position': 'fixed',
+                'top': '20px',
+                'right': '20px',
+                'background-color': '#ff4d4d',
+                'color': 'white',
+                'padding': '15px',
+                'border-radius': '5px',
+                'box-shadow': '0px 0px 10px rgba(0, 0, 0, 0.1)',
+                'z-index': '1000',
+                'display': 'none'
+            });
+
+        // Append the notification to the body
+        $('body').append(notification);
+
+        // Show the notification with fade in
+        notification.fadeIn(400);
+
+        // Set timeout to fade out and remove the notification
+        setTimeout(function() {
+            notification.fadeOut(400, function() {
+                $(this).remove();
+            });
+        }, 3000); // Adjust the time as needed (3000ms = 3 seconds)
+    }
+
 // -- reverted on 10/5/24 -- force updated
 //reason - checkbox issue
 //reverted bug: required checkbox validation wasn't working on the last step
@@ -1432,6 +1461,7 @@ function validation() {
 }
 function displayErrorMessage() {
   $("[data-text=\"error-message\"]").hide();
+  showNotification('Please complete the form.')
   if (unfilledArr.length > 0x0) {
     unfilledArr.forEach(function (_0x5b3da0) {
       $("input[name=\"" + _0x5b3da0.input + "\"]").siblings("[data-text=\"error-message\"]").fadeIn();
