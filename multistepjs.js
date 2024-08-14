@@ -1550,7 +1550,7 @@ $("[data-form=\"submit-btn\"]").on("click", function (_0x57a771) {
     displayErrorMessage();
   } else {       
     // showNotification('Please complete the form.');
-    $(this).parents('form').find('input[name="email-interest"], input[name="full-name-interest"], input[name="phone-popup-interest"]').each((i, e) => {
+    $(this).parents('form').find('input[name="email-interest"], input[name="full-name-interest"], input[name="phone-popup-interest"], input[name="email-footer"], input[name="full-name-footer"], input[name="phone-footer"]').each((i, e) => {
         $('.form-error-msg').remove(); 
         const errorMessage = $('<span class="form-error-msg"></span>').text(message)
                 .css({
