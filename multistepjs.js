@@ -27,6 +27,24 @@ function showNotification(message) {
         }, 3000); // Adjust the time as needed (3000ms = 3 seconds)
     }
 
+let popupFormStepStatus = 0;
+$($('#popup-interest .form-step')[0]).show();
+$($('#popup-interest .form-step')[1]).hide();
+
+$('.form-next-btn.popup-btn').click(function(e) {
+        $($('#popup-interest .form-step')[1]).show();
+        $($('#popup-interest .form-step')[0]).hide();
+        $(this).hide();
+        $('.form-back-btn.popup-btn').show();
+});
+$('.form-back-btn.popup-btn').click(function(e) {
+        $($('#popup-interest .form-step')[0]).show();
+        $($('#popup-interest .form-step')[1]).hide();
+        $(this).hide();
+        $('.form-next-btn.popup-btn').show();
+});
+
+
 // -- reverted on 10/5/24 -- force updated
 //reason - checkbox issue
 //reverted bug: required checkbox validation wasn't working on the last step
