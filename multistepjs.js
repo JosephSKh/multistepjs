@@ -1549,7 +1549,20 @@ $("[data-form=\"submit-btn\"]").on("click", function (_0x57a771) {
   } else if (customError) {
     displayErrorMessage();
   } else {       
-    showNotification('Please complete the form.');
+    // showNotification('Please complete the form.');
+    $(this).parents('form').find('input[name="email-interest"], input[name="full-name-interest"], input[name="phone-popup-interest"]').each((i, e) => {
+        $('.form-error-msg').remove(); 
+        const errorMessage = $('<span class="form-error-msg"></span>').text(message)
+                .css({
+                    'color': '#ff4d4d',
+                    'font-size': '12px',
+                    'margin-top': '5px',
+                    'display': 'block'
+                });
+        if (!e.value) {
+            e.after(errorMessage);
+        }
+    })
   }
 });
 function nextStep() {
