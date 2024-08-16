@@ -27,7 +27,9 @@ function showNotification(message) {
         }, 3000); // Adjust the time as needed (3000ms = 3 seconds)
     }
 
-let popupFormStepStatus = 0;
+let informationPopupFormStepStatus = 0;
+let interestPopupFormStepStatus = 0;
+
 $($('#popup-interest .form-step')[0]).show();
 $($('#popup-interest .form-step')[1]).hide();
 $('#popup-interest .form-back-btn').hide();
@@ -35,6 +37,7 @@ $('#popup-interest .form-submit-btn').hide();
 
 $($('#popup-information .form-step')[0]).show();
 $($('#popup-information .form-step')[1]).hide();
+$($('#popup-information .form-step')[2]).hide();
 $('#popup-information .form-back-btn').hide();
 $('#popup-information .form-submit-btn').hide();
 
@@ -56,20 +59,68 @@ $('#popup-interest .form-back-btn.popup-btn').click(function(e) {
 });
 
 $('#popup-information .form-next-btn.popup-btn').click(function(e) {
-        $($('#popup-information .form-step')[1]).show();
-        $($('#popup-information .form-step')[0]).hide();
-        
-        $('#popup-information .form-back-btn').show();
-        $('#popup-information .form-submit-btn').show();
-        $('#popup-information .form-next-btn.popup-btn').hide();
+        informationPopupFormStepStatus++;
+        switch(informationPopupFormStepStatus) {
+                case 0:
+                        $($('#popup-information .form-step')[0]).show();
+                        $($('#popup-information .form-step')[1]).hide();
+                        $($('#popup-information .form-step')[2]).hide();
+                        
+                        $('#popup-information .form-back-btn').hide();
+                        $('#popup-information .form-submit-btn').hide();
+                        $('#popup-information .form-next-btn.popup-btn').show();
+                        break;
+                case 1:
+                        $($('#popup-information .form-step')[0]).hide();
+                        $($('#popup-information .form-step')[1]).show();
+                        $($('#popup-information .form-step')[2]).hide();
+                        
+                        $('#popup-information .form-back-btn').show();
+                        $('#popup-information .form-submit-btn').hide();
+                        $('#popup-information .form-next-btn.popup-btn').show();
+                        break;
+                case 2:
+                        $($('#popup-information .form-step')[0]).hide();
+                        $($('#popup-information .form-step')[1]).hide();
+                        $($('#popup-information .form-step')[2]).show();
+                        
+                        $('#popup-information .form-back-btn').show();
+                        $('#popup-information .form-submit-btn').show();
+                        $('#popup-information .form-next-btn.popup-btn').hide();
+                        break;
+        }
 });
 $('#popup-information .form-back-btn.popup-btn').click(function(e) {
-        $($('#popup-information .form-step')[0]).show();
-        $($('#popup-information .form-step')[1]).hide();
-        
-        $('#popup-information .form-back-btn').hide();
-        $('#popup-information .form-submit-btn').hide();
-        $('#popup-information .form-next-btn.popup-btn').show();
+        informationPopupFormStepStatus--;
+        switch(informationPopupFormStepStatus) {
+                case 0:
+                        $($('#popup-information .form-step')[0]).show();
+                        $($('#popup-information .form-step')[1]).hide();
+                        $($('#popup-information .form-step')[2]).hide();
+                        
+                        $('#popup-information .form-back-btn').hide();
+                        $('#popup-information .form-submit-btn').hide();
+                        $('#popup-information .form-next-btn.popup-btn').show();
+                        break;
+                case 1:
+                        $($('#popup-information .form-step')[0]).hide();
+                        $($('#popup-information .form-step')[1]).show();
+                        $($('#popup-information .form-step')[2]).hide();
+                        
+                        $('#popup-information .form-back-btn').show();
+                        $('#popup-information .form-submit-btn').hide();
+                        $('#popup-information .form-next-btn.popup-btn').show();
+                        break;
+                case 2:
+                        $($('#popup-information .form-step')[0]).hide();
+                        $($('#popup-information .form-step')[1]).hide();
+                        $($('#popup-information .form-step')[2]).show();
+                        
+                        $('#popup-information .form-back-btn').show();
+                        $('#popup-information .form-submit-btn').show();
+                        $('#popup-information .form-next-btn.popup-btn').hide();
+                        break;
+        }
 });
 
 
