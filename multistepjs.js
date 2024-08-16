@@ -33,7 +33,7 @@ let interestPopupFormStepStatus = 0;
 
 $($('#popup-interest .form-step')[0]).show();
 $($('#popup-interest .form-step')[1]).hide();
-$('#popup-interest .form-back-btn')..css('visibility', 'hidden');
+$('#popup-interest .form-back-btn').css('visibility', 'hidden');
 $('#popup-interest .form-submit-btn').hide();
 
 setTimeout(() => {
