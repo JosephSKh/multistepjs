@@ -443,7 +443,8 @@ function updateStep() {
     $(steps[x]).find("[data-answer=\"" + answer + "\"]").addClass("active-answer-card");
   }
   if (x === 0x0) {
-    $("[data-form=\"back-btn\"]:not(.popup-btn)").hide();
+    // $("[data-form=\"back-btn\"]:not(.popup-btn)").hide();
+    $("[data-form=\"back-btn\"]:not(.popup-btn)").css('visibility', 'hidden');
     $("[data-form=\"next-btn\"]:not(.popup-btn)").show();
     $("[data-form=\"submit-btn\"]").hide();
   } else {
@@ -456,10 +457,11 @@ function updateStep() {
       }
       $("[data-form=\"submit-btn\"]").show();
       $("[data-form-ms=\"submit-btn\"]").show();
-      $("[data-form=\"back-btn\"]:not(.popup-btn)").show();
+      // $("[data-form=\"back-btn\"]:not(.popup-btn)").show();
+      $("[data-form=\"back-btn\"]:not(.popup-btn)").css('visibility', 'visible');
     } else {
       $("[data-form=\"next-btn\"]:not(.popup-btn)").show();
-      $("[data-form=\"back-btn\"]:not(.popup-btn)").show();
+      $("[data-form=\"back-btn\"]:not(.popup-btn)").css('visibility', 'visible');
       $("[data-form=\"submit-btn\"]").hide();
       $("[data-form-ms=\"submit-btn\"]").hide();
     }
