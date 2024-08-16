@@ -30,24 +30,25 @@ function showNotification(message) {
 let informationPopupFormStepStatus = 0;
 let interestPopupFormStepStatus = 0;
 
+
 $($('#popup-interest .form-step')[0]).show();
 $($('#popup-interest .form-step')[1]).hide();
-$('#popup-interest .form-back-btn').hide();
+$('#popup-interest .form-back-btn')..css('visibility', 'hidden');
 $('#popup-interest .form-submit-btn').hide();
 
 setTimeout(() => {
-$($('#popup-information .form-step')[0]).show();
-$($('#popup-information .form-step')[1]).hide();
-$($('#popup-information .form-step')[2]).hide();
-$('#popup-information .form-back-btn').hide();
-$('#popup-information .form-submit-btn').hide();
+        $($('#popup-information .form-step')[0]).show();
+        $($('#popup-information .form-step')[1]).hide();
+        $($('#popup-information .form-step')[2]).hide();
+        $('#popup-information .form-back-btn').css('visibility', 'hidden');
+        $('#popup-information .form-submit-btn').hide();
 }, 500);
 
 $('#popup-interest .form-next-btn.popup-btn').click(function(e) {
         $($('#popup-interest .form-step')[1]).show();
         $($('#popup-interest .form-step')[0]).hide();
         
-        $('#popup-interest .form-back-btn').show();
+        $('#popup-interest .form-back-btn').css('visibility', 'visible');
         $('#popup-interest .form-submit-btn').show();
         $('#popup-interest .form-next-btn.popup-btn').hide();
 });
@@ -55,7 +56,7 @@ $('#popup-interest .form-back-btn.popup-btn').click(function(e) {
         $($('#popup-interest .form-step')[0]).show();
         $($('#popup-interest .form-step')[1]).hide();
         
-        $('#popup-interest .form-back-btn').hide();
+        $('#popup-interest .form-back-btn').css('visibility', 'hidden');
         $('#popup-interest .form-submit-btn').hide();
         $('#popup-interest .form-next-btn.popup-btn').show();
 });
@@ -68,7 +69,7 @@ $('#popup-information .form-next-btn.popup-btn').click(function(e) {
                         $($('#popup-information .form-step')[1]).hide();
                         $($('#popup-information .form-step')[2]).hide();
                         
-                        $('#popup-information .form-back-btn').hide();
+                        $('#popup-information .form-back-btn').css('visibility', 'hidden');
                         $('#popup-information .form-submit-btn').hide();
                         $('#popup-information .form-next-btn.popup-btn').show();
                         break;
@@ -77,7 +78,7 @@ $('#popup-information .form-next-btn.popup-btn').click(function(e) {
                         $($('#popup-information .form-step')[1]).show();
                         $($('#popup-information .form-step')[2]).hide();
                         
-                        $('#popup-information .form-back-btn').show();
+                        $('#popup-information .form-back-btn').css('visibility', 'visible');
                         $('#popup-information .form-submit-btn').hide();
                         $('#popup-information .form-next-btn.popup-btn').show();
                         break;
@@ -86,7 +87,7 @@ $('#popup-information .form-next-btn.popup-btn').click(function(e) {
                         $($('#popup-information .form-step')[1]).hide();
                         $($('#popup-information .form-step')[2]).show();
                         
-                        $('#popup-information .form-back-btn').show();
+                        $('#popup-information .form-back-btn').css('visibility', 'visible');
                         $('#popup-information .form-submit-btn').show();
                         $('#popup-information .form-next-btn.popup-btn').hide();
                         break;
