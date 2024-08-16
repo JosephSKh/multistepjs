@@ -101,7 +101,7 @@ $('#popup-information .form-back-btn.popup-btn').click(function(e) {
                         $($('#popup-information .form-step')[1]).hide();
                         $($('#popup-information .form-step')[2]).hide();
                         
-                        $('#popup-information .form-back-btn').hide();
+                        $('#popup-information .form-back-btn').css('visibility', 'hidden');
                         $('#popup-information .form-submit-btn').hide();
                         $('#popup-information .form-next-btn.popup-btn').show();
                         break;
@@ -110,7 +110,7 @@ $('#popup-information .form-back-btn.popup-btn').click(function(e) {
                         $($('#popup-information .form-step')[1]).show();
                         $($('#popup-information .form-step')[2]).hide();
                         
-                        $('#popup-information .form-back-btn').show();
+                        $('#popup-information .form-back-btn').css('visibility', 'visible');
                         $('#popup-information .form-submit-btn').hide();
                         $('#popup-information .form-next-btn.popup-btn').show();
                         break;
@@ -119,7 +119,7 @@ $('#popup-information .form-back-btn.popup-btn').click(function(e) {
                         $($('#popup-information .form-step')[1]).hide();
                         $($('#popup-information .form-step')[2]).show();
                         
-                        $('#popup-information .form-back-btn').show();
+                        $('#popup-information .form-back-btn').css('visibility', 'visible');
                         $('#popup-information .form-submit-btn').show();
                         $('#popup-information .form-next-btn.popup-btn').hide();
                         break;
