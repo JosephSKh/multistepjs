@@ -1678,7 +1678,7 @@ $("[data-form=\"submit-btn\"]").on("click", function (_0x57a771) {
     newTab = $(this).data("new-tab");
   }
   successCard = $(this).data("success");
-  _0x57a771.preventDefault();
+  // _0x57a771.preventDefault();
   _0x57a771.stopPropagation();
   if (logicExtra) {
     $(this).prop("novalidate", true);
@@ -1701,7 +1701,7 @@ $("[data-form=\"submit-btn\"]").on("click", function (_0x57a771) {
       $("[data-text=\"error-message\"]").hide();
     }
   } else if (customError) {
-    displayErrorMessage();
+    // displayErrorMessage();
   } else {       
     // showNotification('Please complete the form.');
         $('.form-error-msg').remove();
