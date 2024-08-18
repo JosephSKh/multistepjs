@@ -540,7 +540,11 @@ function updateStep() {
   }
   if (x === 0x0) {
     // $("[data-form=\"back-btn\"]:not(.popup-btn)").hide();
-    $("[data-form=\"back-btn\"]:not(.popup-btn)").css('visibility', 'hidden');
+    // $("[data-form=\"back-btn\"]:not(.popup-btn)").css('visibility', 'hidden');
+        $("[data-form=\"back-btn\"]:not(.popup-btn)").css('visibility', 'visible');
+        $("[data-form=\"back-btn\"]:not(.popup-btn)").css('opacity', '0.5');
+        $("[data-form=\"back-btn\"]:not(.popup-btn)").attr('disabled', 'true');
+          
     $("[data-form=\"next-btn\"]:not(.popup-btn)").show();
     $("[data-form=\"submit-btn\"]").hide();
   } else {
@@ -554,10 +558,14 @@ function updateStep() {
       $("[data-form=\"submit-btn\"]").show();
       $("[data-form-ms=\"submit-btn\"]").show();
       // $("[data-form=\"back-btn\"]:not(.popup-btn)").show();
-      $("[data-form=\"back-btn\"]:not(.popup-btn)").css('visibility', 'visible');
+        $("[data-form=\"back-btn\"]:not(.popup-btn)").css('visibility', 'visible');
+        $("[data-form=\"back-btn\"]:not(.popup-btn)").css('opacity', '1');
+        $("[data-form=\"back-btn\"]:not(.popup-btn)").removeAttr('disabled');
     } else {
       $("[data-form=\"next-btn\"]:not(.popup-btn)").show();
-      $("[data-form=\"back-btn\"]:not(.popup-btn)").css('visibility', 'visible');
+        $("[data-form=\"back-btn\"]:not(.popup-btn)").css('visibility', 'visible');
+        $("[data-form=\"back-btn\"]:not(.popup-btn)").css('opacity', '1');
+        $("[data-form=\"back-btn\"]:not(.popup-btn)").removeAttr('disabled');
       $("[data-form=\"submit-btn\"]").hide();
       $("[data-form-ms=\"submit-btn\"]").hide();
     }
