@@ -27,6 +27,14 @@ function showNotification(message) {
         }, 3000); // Adjust the time as needed (3000ms = 3 seconds)
     }
 
+$('.open-modal').click(function(){
+        $('body').css('overflow', 'hidden');
+});
+
+$('.popup_close_btn').click(function(){
+        $('body').css('overflow', '');
+});
+
 let informationPopupFormStepStatus = 0;
 let interestPopupFormStepStatus = 0;
 
