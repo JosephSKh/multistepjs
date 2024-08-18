@@ -37,11 +37,11 @@ $('#popup-interest .form-back-btn').css('visibility', 'hidden');
 $('#popup-interest .form-submit-btn').hide();
 
 setTimeout(() => {
-        $($('#popup-information .form-step')[0]).show();
-        $($('#popup-information .form-step')[1]).hide();
-        $($('#popup-information .form-step')[2]).hide();
-        $('#popup-information .form-back-btn').css('visibility', 'hidden');
-        $('#popup-information .form-submit-btn').hide();
+        $($('#popup-information-modal .form-step')[0]).show();
+        $($('#popup-information-modal .form-step')[1]).hide();
+        $($('#popup-information-modal .form-step')[2]).hide();
+        $('#popup-information-modal .form-back-btn').css('visibility', 'hidden');
+        $('#popup-information-modal .form-submit-btn').hide();
 }, 500);
 
 $('#popup-interest .form-next-btn.popup-btn').click(function(e) {
@@ -61,67 +61,67 @@ $('#popup-interest .form-back-btn.popup-btn').click(function(e) {
         $('#popup-interest .form-next-btn.popup-btn').show();
 });
 
-$('#popup-information .form-next-btn.popup-btn').click(function(e) {
+$('#popup-information-modal .form-next-btn.popup-btn').click(function(e) {
         informationPopupFormStepStatus++;
         switch(informationPopupFormStepStatus) {
                 case 0:
-                        $($('#popup-information .form-step')[0]).show();
-                        $($('#popup-information .form-step')[1]).hide();
-                        $($('#popup-information .form-step')[2]).hide();
+                        $($('#popup-information-modal .form-step')[0]).show();
+                        $($('#popup-information-modal .form-step')[1]).hide();
+                        $($('#popup-information-modal .form-step')[2]).hide();
                         
-                        $('#popup-information .form-back-btn').css('visibility', 'hidden');
-                        $('#popup-information .form-submit-btn').hide();
-                        $('#popup-information .form-next-btn.popup-btn').show();
+                        $('#popup-information-modal .form-back-btn').css('visibility', 'hidden');
+                        $('#popup-information-modal .form-submit-btn').hide();
+                        $('#popup-information-modal .form-next-btn.popup-btn').show();
                         break;
                 case 1:
-                        $($('#popup-information .form-step')[0]).hide();
-                        $($('#popup-information .form-step')[1]).show();
-                        $($('#popup-information .form-step')[2]).hide();
+                        $($('#popup-information-modal .form-step')[0]).hide();
+                        $($('#popup-information-modal .form-step')[1]).show();
+                        $($('#popup-information-modal .form-step')[2]).hide();
                         
-                        $('#popup-information .form-back-btn').css('visibility', 'visible');
-                        $('#popup-information .form-submit-btn').hide();
-                        $('#popup-information .form-next-btn.popup-btn').show();
+                        $('#popup-information-modal .form-back-btn').css('visibility', 'visible');
+                        $('#popup-information-modal .form-submit-btn').hide();
+                        $('#popup-information-modal .form-next-btn.popup-btn').show();
                         break;
                 case 2:
-                        $($('#popup-information .form-step')[0]).hide();
-                        $($('#popup-information .form-step')[1]).hide();
-                        $($('#popup-information .form-step')[2]).show();
+                        $($('#popup-information-modal .form-step')[0]).hide();
+                        $($('#popup-information-modal .form-step')[1]).hide();
+                        $($('#popup-information-modal .form-step')[2]).show();
                         
-                        $('#popup-information .form-back-btn').css('visibility', 'visible');
-                        $('#popup-information .form-submit-btn').show();
-                        $('#popup-information .form-next-btn.popup-btn').hide();
+                        $('#popup-information-modal .form-back-btn').css('visibility', 'visible');
+                        $('#popup-information-modal .form-submit-btn').show();
+                        $('#popup-information-modal .form-next-btn.popup-btn').hide();
                         break;
         }
 });
-$('#popup-information .form-back-btn.popup-btn').click(function(e) {
+$('#popup-information-modal .form-back-btn.popup-btn').click(function(e) {
         informationPopupFormStepStatus--;
         switch(informationPopupFormStepStatus) {
                 case 0:
-                        $($('#popup-information .form-step')[0]).show();
-                        $($('#popup-information .form-step')[1]).hide();
-                        $($('#popup-information .form-step')[2]).hide();
+                        $($('#popup-information-modal .form-step')[0]).show();
+                        $($('#popup-information-modal .form-step')[1]).hide();
+                        $($('#popup-information-modal .form-step')[2]).hide();
                         
-                        $('#popup-information .form-back-btn').css('visibility', 'hidden');
-                        $('#popup-information .form-submit-btn').hide();
-                        $('#popup-information .form-next-btn.popup-btn').show();
+                        $('#popup-information-modal .form-back-btn').css('visibility', 'hidden');
+                        $('#popup-information-modal .form-submit-btn').hide();
+                        $('#popup-information-modal .form-next-btn.popup-btn').show();
                         break;
                 case 1:
-                        $($('#popup-information .form-step')[0]).hide();
-                        $($('#popup-information .form-step')[1]).show();
-                        $($('#popup-information .form-step')[2]).hide();
+                        $($('#popup-information-modal .form-step')[0]).hide();
+                        $($('#popup-information-modal .form-step')[1]).show();
+                        $($('#popup-information-modal .form-step')[2]).hide();
                         
-                        $('#popup-information .form-back-btn').css('visibility', 'visible');
-                        $('#popup-information .form-submit-btn').hide();
-                        $('#popup-information .form-next-btn.popup-btn').show();
+                        $('#popup-information-modal .form-back-btn').css('visibility', 'visible');
+                        $('#popup-information-modal .form-submit-btn').hide();
+                        $('#popup-information-modal .form-next-btn.popup-btn').show();
                         break;
                 case 2:
-                        $($('#popup-information .form-step')[0]).hide();
-                        $($('#popup-information .form-step')[1]).hide();
-                        $($('#popup-information .form-step')[2]).show();
+                        $($('#popup-information-modal .form-step')[0]).hide();
+                        $($('#popup-information-modal .form-step')[1]).hide();
+                        $($('#popup-information-modal .form-step')[2]).show();
                         
-                        $('#popup-information .form-back-btn').css('visibility', 'visible');
-                        $('#popup-information .form-submit-btn').show();
-                        $('#popup-information .form-next-btn.popup-btn').hide();
+                        $('#popup-information-modal .form-back-btn').css('visibility', 'visible');
+                        $('#popup-information-modal .form-submit-btn').show();
+                        $('#popup-information-modal .form-next-btn.popup-btn').hide();
                         break;
         }
 });
