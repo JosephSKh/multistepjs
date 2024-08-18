@@ -1704,13 +1704,13 @@ $("[data-form=\"submit-btn\"]").on("click", function (_0x57a771) {
     // displayErrorMessage();
   } else {       
     // showNotification('Please complete the form.');
-        $('.form-error-msg').remove();
+      /*  $('.form-error-msg').remove();
         $(this).parents('form').find('input[name="email-interest"], input[name="full-name-interest"], input[name="phone-popup-interest"], input[name="email-footer"], input[name="full-name-footer"], input[name="phone-footer"]').each((i, e) => {
         const errorMessage = `<span class="form-error-msg" style="color: #ff4d4d; font-size: 12px; margin-top: 5px; display: block">Please fill this field</span>`;
         if (!e.value) {
             $(e).after(errorMessage);
         }
-    })
+    }) */
   }
 });
 function nextStep() {
