@@ -60,8 +60,8 @@ $('#popup-interest .form-next-btn.popup-btn').click(function(e) {
         
         // $('#popup-interest .form-back-btn').css('visibility', 'hidden');
         $('#popup-interest .form-back-btn').css('visibility', 'visible');
-        $('#popup-interest .form-back-btn').css('opacity', '0.5');
-        $('#popup-interest .form-back-btn').attr('disabled', 'true');
+        $('#popup-interest .form-back-btn').css('opacity', '1');
+        $('#popup-interest .form-back-btn').removeAttr('disabled');
                 
         $('#popup-interest .form-submit-btn').show();
         $('#popup-interest .form-next-btn.popup-btn').hide();
