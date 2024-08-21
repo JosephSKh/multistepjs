@@ -31,7 +31,7 @@ $('.open-modal').click(function(){
         $('body').css('overflow', 'hidden');
 });
 
-$('.popup_close_btn').click(function(){
+$('.popup_close_btn, .popup_bg').click(function(){
         $('body').css('overflow', '');
 });
 
